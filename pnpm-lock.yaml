@@ -11,6 +11,9 @@ importers:
       '@aws-sdk/client-sesv2':
         specifier: ^3.1037.0
         version: 3.1037.0
+      geist:
+        specifier: ^1.7.0
+        version: 1.7.0(next@15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5))
       lucide-react:
         specifier: ^0.469.0
         version: 0.469.0(react@19.2.5)
@@ -707,6 +710,11 @@ packages:
   fast-xml-parser@5.7.1:
     resolution: {integrity: sha512-8Cc3f8GUGUULg34pBch/KGyPLglS+OFs05deyOlY7fL2MTagYPKrVQNmR1fLF/yJ9PH5ZSTd3YDF6pnmeZU+zA==}
     hasBin: true
+
+  geist@1.7.0:
+    resolution: {integrity: sha512-ZaoiZwkSf0DwwB1ncdLKp+ggAldqxl5L1+SXaNIBGkPAqcu+xjVJLxlf3/S8vLt9UHx1xu5fz3lbzKCj5iOVdQ==}
+    peerDependencies:
+      next: '>=13.2.0'
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -1789,6 +1797,10 @@ snapshots:
       fast-xml-builder: 1.1.5
       path-expression-matcher: 1.5.0
       strnum: 2.2.3
+
+  geist@1.7.0(next@15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5)):
+    dependencies:
+      next: 15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
 
   graceful-fs@4.2.11: {}
 
