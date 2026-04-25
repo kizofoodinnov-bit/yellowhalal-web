@@ -373,6 +373,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══════════════ COFFRETS CADEAUX ═══════════════ */}
+      <section style={{ padding: '56px 0', background: 'linear-gradient(180deg, #FFFDF5 0%, #FFF8E1 100%)' }}>
+        <div style={container}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <span style={{ display: 'inline-block', fontSize: 12, fontWeight: 700, color: C.yellow, background: 'rgba(255,194,0,0.15)', padding: '6px 16px', borderRadius: 20, marginBottom: 12, textTransform: 'uppercase', letterSpacing: 1 }}>🎁 Nouveau</span>
+            <h2 style={{ fontSize: 32, fontWeight: 800, color: C.black, marginBottom: 8 }}>Coffrets Cadeaux YellowHalal</h2>
+            <p style={{ fontSize: 16, color: C.gray, maxWidth: 600, margin: '0 auto' }}>Offrez une expérience unique 100% halal. Gastronomie, bien-être, spa… des idées cadeaux d’exception pour vos proches.</p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+            {[
+              { name: 'Gastronomie d\u2019Exception', desc: 'Un dîner d\u2019exception pour 2 personnes dans un restaurant halal étoilé ou bistronomique.', price: '89,90', img: '/images/box-gastronomie.png', badge: 'Best-seller' },
+              { name: 'Échappée Bien-Être & Spa', desc: 'Une séance bien-être dans un spa halal-friendly avec espaces privatifs et massages modestes.', price: '119,90', img: '/images/box-spa.png', badge: 'Exclusif' },
+              { name: 'Pause Bien-Être entre Femmes', desc: 'Le coffret soins réservé aux femmes : hammam, massages et saunas dans un cadre 100% privatif.', price: '99,90', img: '/images/box-femmes.png', badge: 'Femmes' },
+              { name: 'Soins & Spas Premium', desc: 'Collection premium : une séance bien-être d\u2019exception pour 1 ou 2 personnes dans un spa de luxe.', price: '159,90', img: '/images/box-premium.png', badge: 'Premium' },
+            ].map(box => (
+              <div key={box.name} style={{ background: C.white, borderRadius: 16, overflow: 'hidden', border: `1px solid ${C.grayBorder}`, boxShadow: '0 4px 20px rgba(0,0,0,0.06)', transition: 'transform 0.2s, box-shadow 0.2s', cursor: 'pointer' }}>
+                <div style={{ position: 'relative', width: '100%', height: 280 }}>
+                  <Image src={box.img} alt={box.name} fill style={{ objectFit: 'cover' }} />
+                  <div style={{ position: 'absolute', top: 12, left: 12, background: C.yellow, color: C.black, fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 20 }}>{box.badge}</div>
+                </div>
+                <div style={{ padding: 20 }}>
+                  <h3 style={{ fontSize: 16, fontWeight: 700, color: C.black, marginBottom: 6, lineHeight: 1.3 }}>{box.name}</h3>
+                  <p style={{ fontSize: 13, color: C.gray, lineHeight: 1.5, marginBottom: 16, minHeight: 40 }}>{box.desc}</p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <span style={{ fontSize: 22, fontWeight: 800, color: C.black }}>{box.price}<span style={{ fontSize: 14, fontWeight: 500, color: C.gray }}>€</span></span>
+                    <button style={{ padding: '10px 20px', background: C.yellow, color: C.black, fontSize: 13, fontWeight: 700, borderRadius: 10, border: 'none', cursor: 'pointer' }}>Commander →</button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: 32 }}>
+            <button style={{ padding: '14px 32px', background: C.black, color: C.white, fontSize: 14, fontWeight: 700, borderRadius: 12, border: 'none', cursor: 'pointer' }}>Voir tous les coffrets →</button>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════ CTA PROS ═══════════════ */}
       <section id="cta-pros" style={{ padding: '48px 0' }}>
         <div style={container}>
