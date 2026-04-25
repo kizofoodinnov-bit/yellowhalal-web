@@ -255,12 +255,12 @@ export default function HomePage() {
         <div style={container}>
           <p style={{ fontSize: 11, color: C.grayLight, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 }}>Publicité</p>
           <div style={{ position: 'relative', borderRadius: 16, overflow: 'hidden', height: 160 }}>
-            <Image src="/images/kebab.jpg" alt="Isla Délice" fill style={{ objectFit: 'cover' }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%)' }} />
+            <Image src="/images/anaaka.png" alt="Anaaka Halal Skincare" fill style={{ objectFit: 'cover' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%)' }} />
             <div style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '100%', padding: '0 32px' }}>
               <div>
-                <h3 style={{ fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>Isla Délice — Certifié halal depuis 1992</h3>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)' }}>Découvrez notre gamme complète de charcuterie et traiteur halal dans plus de 3 500 points de vente.</p>
+                <h3 style={{ fontSize: 22, fontWeight: 700, color: C.white, marginBottom: 4 }}>Anaaka — Halal Skincare de luxe</h3>
+                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)' }}>Des soins haut de gamme, certifiés halal, pour sublimer votre peau au naturel.</p>
               </div>
               <button style={{ padding: '14px 28px', background: C.yellow, color: C.black, fontSize: 14, fontWeight: 700, borderRadius: 10, border: 'none', cursor: 'pointer', flexShrink: 0, marginLeft: 24 }}>Découvrir →</button>
             </div>
