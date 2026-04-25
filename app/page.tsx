@@ -147,8 +147,8 @@ export default function HomePage() {
 
           {/* Quick tags */}
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8 }}>
-            {['Restaurant halal', 'Boucherie', 'Mosquée', 'Pâtisserie orientale', 'Traiteur', 'Épicerie'].map(t => (
-              <button key={t} style={{ padding: '8px 16px', background: 'rgba(255,255,255,0.7)', borderRadius: 20, fontSize: 13, fontWeight: 500, color: C.dark, border: 'none', cursor: 'pointer', backdropFilter: 'blur(4px)' }}>
+            {['Restaurant halal', 'Boucherie', 'Mosquée', 'Pâtisserie orientale', 'Traiteur', 'Épicerie', 'Hôtel'].map(t => (
+              <button key={t} style={{ padding: '8px 16px', background: C.white, borderRadius: 20, fontSize: 13, fontWeight: 500, color: C.dark, border: 'none', cursor: 'pointer', boxShadow: '0 1px 4px rgba(0,0,0,0.1)' }}>
                 {t}
               </button>
             ))}
