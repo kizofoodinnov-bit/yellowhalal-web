@@ -1,21 +1,53 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
 
 :root {
-  --yh-yellow: #FFC200;
-  --yh-yellow-soft: #FFF4CC;
-  --yh-black: #0A0A0A;
-  --yh-ink: #141414;
-  --yh-graphite: #1C1C1E;
-  --yh-gray-90: #3A3A3C;
-  --yh-gray-60: #8E8E93;
-  --yh-gray-30: #C7C7CC;
-  --yh-gray-10: #F2F2F7;
-  --yh-cream: #FAFAF7;
-  --yh-white: #FFFFFF;
+  --color-primary: #FFD700;
+  --color-primary-dark: #FFC700;
+  --color-secondary: #1a1a1a;
+  --color-text: #1a1a1a;
+  --color-text-light: #666666;
+  --color-bg: #ffffff;
+  --color-bg-light: #f9f9f9;
+  --color-border: #e0e0e0;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  color: var(--yh-black);
-  background: var(--yh-white);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3 { font-family: var(--font-display); }
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
