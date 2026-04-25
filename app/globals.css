@@ -1,24 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --font-geist: 'Geist', system-ui, -apple-system, sans-serif;
-  --color-yh-yellow: #FFC200;
-  --color-yh-yellow-hover: #E6AF00;
-  --color-yh-yellow-light: #FFF8E1;
-  --color-yh-black: #1A1A1A;
-  --color-yh-dark: #2D2D2D;
-  --color-yh-gray-dark: #4A4A4A;
-  --color-yh-gray: #6B6B6B;
-  --color-yh-gray-light: #9E9E9E;
-  --color-yh-gray-border: #E0E0E0;
-  --color-yh-gray-bg: #F5F5F5;
-  --color-yh-white: #FFFFFF;
-  --color-yh-green: #2E7D32;
-  --color-yh-green-light: #E8F5E9;
-  --color-yh-blue: #1565C0;
-  --color-yh-red: #C62828;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -31,28 +12,12 @@ html {
 }
 
 body {
-  font-family: var(--font-geist);
-  color: var(--color-yh-black);
-  background-color: var(--color-yh-gray-bg);
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  color: #1A1A1A;
+  background-color: #F5F5F5;
   line-height: 1.6;
-  font-size: 15px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
-}
-
-input {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  background: transparent;
-}
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input { font-family: inherit; border: none; outline: none; background: transparent; }
