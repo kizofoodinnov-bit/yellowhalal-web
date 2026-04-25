@@ -1,37 +1,22 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap');
-
 @theme {
   --font-geist: 'Geist', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Instrument Serif', Georgia, serif;
   --color-yh-yellow: #FFC200;
-  --color-yh-yellow-soft: #FFF4CC;
-  --color-yh-black: #0A0A0A;
-  --color-yh-ink: #141414;
-  --color-yh-graphite: #1C1C1E;
-  --color-yh-gray-90: #3A3A3C;
-  --color-yh-gray-60: #8E8E93;
-  --color-yh-gray-30: #C7C7CC;
-  --color-yh-gray-10: #F2F2F7;
-  --color-yh-cream: #FAFAF7;
+  --color-yh-yellow-hover: #E6AF00;
+  --color-yh-yellow-light: #FFF8E1;
+  --color-yh-black: #1A1A1A;
+  --color-yh-dark: #2D2D2D;
+  --color-yh-gray-dark: #4A4A4A;
+  --color-yh-gray: #6B6B6B;
+  --color-yh-gray-light: #9E9E9E;
+  --color-yh-gray-border: #E0E0E0;
+  --color-yh-gray-bg: #F5F5F5;
   --color-yh-white: #FFFFFF;
-  --color-yh-green: #30D158;
-  --color-yh-green-dark: #248A3D;
-  --color-yh-red: #FF3B30;
-  --color-cat-restau: #FFC200;
-  --color-cat-epicerie: #34C759;
-  --color-cat-mode: #FF6B4A;
-  --color-cat-education: #0A84FF;
-  --color-cat-sante: #30D158;
-  --color-cat-voyage: #5AC8FA;
-  --color-cat-event: #FF375F;
-  --color-cat-finance: #2AB3A6;
-}
-
-:root {
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --color-yh-green: #2E7D32;
+  --color-yh-green-light: #E8F5E9;
+  --color-yh-blue: #1565C0;
+  --color-yh-red: #C62828;
 }
 
 * {
@@ -43,120 +28,31 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: var(--font-geist);
   color: var(--color-yh-black);
-  background-color: var(--color-yh-white);
-  line-height: 1.5;
+  background-color: var(--color-yh-gray-bg);
+  line-height: 1.6;
+  font-size: 15px;
 }
 
-/* Eyebrow label */
-.eyebrow {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-yh-gray-60);
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Section title accent */
-.title-accent {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--color-yh-yellow);
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
 }
 
-/* Animations */
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-30px) rotate(3deg); }
-}
-
-@keyframes float-badge {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-12px) rotate(2deg); }
-}
-
-@keyframes pulse-ring {
-  0% { transform: scale(0.8); opacity: 0.7; }
-  100% { transform: scale(1.6); opacity: 0; }
-}
-
-@keyframes glow-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.35; }
-  50% { transform: scale(1.2); opacity: 0.2; }
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-
-@keyframes highlight-reveal {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
-
-@keyframes reveal-up {
-  from { transform: translateY(110%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fade-in-up {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* Scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Ad label */
-.ad-label {
-  position: absolute;
-  top: -9px;
-  left: 24px;
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-yh-gray-60);
-  background: var(--color-yh-white);
-  padding: 0 6px;
-}
-
-/* Footer link hover underline */
-.footer-link {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.footer-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background: var(--color-yh-yellow);
-  transition: width 0.3s ease;
-}
-
-.footer-link:hover {
-  color: var(--color-yh-yellow);
-}
-
-.footer-link:hover::after {
-  width: 16px;
+input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: transparent;
 }

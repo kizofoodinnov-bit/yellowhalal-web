@@ -1,94 +1,87 @@
 'use client';
 
-import { ArrowRight, Star, Eye, Phone } from 'lucide-react';
-import RevealOnScroll from '@/components/ui/RevealOnScroll';
+import { ArrowRight, Users, Eye, TrendingUp, CheckCircle } from 'lucide-react';
+
+const benefits = [
+  'Fiche détaillée avec photos et horaires',
+  'Avis clients et notation',
+  'Référencement prioritaire dans les résultats',
+  'Statistiques de visibilité en temps réel',
+];
 
 export default function CTAPros() {
   return (
-    <section id="cta-pros" className="py-20 px-6">
-      <div className="max-w-[1280px] mx-auto">
-        <RevealOnScroll>
-          <div className="relative bg-yh-black rounded-[32px] px-8 md:px-[60px] py-16 md:py-[72px] overflow-hidden">
-            {/* Glow */}
-            <div
-              className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
-              style={{
-                background: 'radial-gradient(circle, rgba(255,194,0,0.25) 0%, transparent 70%)',
-                filter: 'blur(80px)',
-                animation: 'glow-pulse 12s ease-in-out infinite',
-              }}
-            />
+    <section id="cta-pros" className="py-10 px-5">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="bg-yh-black rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {/* Left content */}
+            <div className="p-8 md:p-12">
+              <span className="inline-block px-3 py-1 bg-yh-yellow/20 text-yh-yellow text-[12px] font-semibold rounded-full mb-4">
+                Pour les professionnels
+              </span>
 
-            <div className="relative grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-12 items-center">
-              {/* Left */}
-              <div>
-                <span className="eyebrow !text-yh-yellow">Pour les professionnels</span>
-                <h2 className="text-[36px] md:text-[52px] font-semibold tracking-[-0.04em] leading-[1.1] text-white mt-4 mb-6">
-                  Donnez plus de visibilité à votre{' '}
-                  <em className="font-serif italic text-yh-yellow">établissement halal</em>
-                </h2>
-                <p className="text-[16px] text-white/60 leading-relaxed mb-8 max-w-[520px]">
-                  Rejoignez 15 000+ professionnels qui développent leur activité sur YellowHalal. Fiche détaillée, photos, avis clients, click-and-collect, référencement prioritaire.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <button className="flex items-center gap-2 px-6 py-3.5 bg-yh-yellow text-yh-black text-[14px] font-semibold rounded-full hover:bg-[#e6af00] transition-colors">
-                    Inscrire mon établissement
-                    <ArrowRight size={16} />
-                  </button>
-                  <button className="px-6 py-3.5 border border-white/20 text-white text-[14px] font-semibold rounded-full hover:border-white/40 transition-colors">
-                    Voir nos tarifs
-                  </button>
-                </div>
-              </div>
+              <h2 className="text-[28px] md:text-[34px] font-bold text-white leading-tight mb-4">
+                Développez votre activité sur YellowHalal
+              </h2>
 
-              {/* Right - Merchant card mockup */}
-              <div className="hidden md:block">
-                <div
-                  className="relative bg-yh-graphite rounded-2xl p-6 border border-white/10 transition-transform duration-500 hover:rotate-0"
-                  style={{ transform: 'rotate(3deg)' }}
-                >
-                  {/* Avatar */}
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-12 h-12 rounded-full bg-yh-yellow flex items-center justify-center">
-                      <span className="font-serif italic text-[24px] text-yh-black">S</span>
-                    </div>
-                    <div>
-                      <div className="text-[15px] font-semibold text-white">Sultan Café & Palace</div>
-                      <div className="text-[12px] text-white/50">Restaurant marocain</div>
-                    </div>
-                  </div>
+              <p className="text-[15px] text-white/60 leading-relaxed mb-6">
+                Rejoignez plus de 15 000 professionnels qui utilisent YellowHalal pour développer leur clientèle.
+              </p>
 
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="bg-white/5 rounded-xl p-3 text-center">
-                      <Star size={18} className="text-yh-yellow mx-auto mb-1" />
-                      <div className="text-[16px] font-bold text-white">142</div>
-                      <div className="text-[11px] text-white/40">avis</div>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-3 text-center">
-                      <Eye size={18} className="text-yh-yellow mx-auto mb-1" />
-                      <div className="text-[16px] font-bold text-white">2,3k</div>
-                      <div className="text-[11px] text-white/40">vues/mois</div>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-3 text-center">
-                      <Phone size={18} className="text-yh-yellow mx-auto mb-1" />
-                      <div className="text-[16px] font-bold text-white">+38%</div>
-                      <div className="text-[11px] text-white/40">appels</div>
-                    </div>
-                  </div>
+              {/* Benefits */}
+              <ul className="space-y-3 mb-8">
+                {benefits.map((b) => (
+                  <li key={b} className="flex items-center gap-3 text-[14px] text-white/80">
+                    <CheckCircle size={18} className="text-yh-yellow shrink-0" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
 
-                  {/* Floating badge */}
-                  <div
-                    className="absolute -top-4 -right-4 bg-yh-yellow text-yh-black text-[12px] font-bold px-4 py-2 rounded-full shadow-lg"
-                    style={{ animation: 'float-badge 4s ease-in-out infinite' }}
-                  >
-                    À partir de 19,90€/mois
-                  </div>
-                </div>
+              {/* CTA buttons */}
+              <div className="flex flex-wrap gap-3">
+                <button className="flex items-center gap-2 px-6 py-3 bg-yh-yellow text-yh-black text-[14px] font-semibold rounded-lg hover:bg-yh-yellow-hover transition-colors">
+                  Inscrire mon établissement
+                  <ArrowRight size={16} />
+                </button>
+                <button className="px-6 py-3 border border-white/20 text-white text-[14px] font-medium rounded-lg hover:border-white/40 transition-colors">
+                  En savoir plus
+                </button>
               </div>
             </div>
+
+            {/* Right stats */}
+            <div className="bg-white/5 p-8 md:p-12 flex flex-col justify-center">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-5 bg-white/5 rounded-xl">
+                  <Users size={28} className="text-yh-yellow mx-auto mb-2" />
+                  <div className="text-[28px] font-bold text-white">15k+</div>
+                  <div className="text-[13px] text-white/50">Professionnels inscrits</div>
+                </div>
+                <div className="text-center p-5 bg-white/5 rounded-xl">
+                  <Eye size={28} className="text-yh-yellow mx-auto mb-2" />
+                  <div className="text-[28px] font-bold text-white">2,3M</div>
+                  <div className="text-[13px] text-white/50">Recherches / mois</div>
+                </div>
+                <div className="text-center p-5 bg-white/5 rounded-xl">
+                  <TrendingUp size={28} className="text-yh-yellow mx-auto mb-2" />
+                  <div className="text-[28px] font-bold text-white">+38%</div>
+                  <div className="text-[13px] text-white/50">Appels générés</div>
+                </div>
+                <div className="text-center p-5 bg-white/5 rounded-xl">
+                  <div className="text-yh-yellow text-[28px] mb-2">180</div>
+                  <div className="text-[28px] font-bold text-white">villes</div>
+                  <div className="text-[13px] text-white/50">Couverture France</div>
+                </div>
+              </div>
+
+              <p className="text-center text-[14px] text-white/40 mt-6">
+                À partir de 19,90€ / mois
+              </p>
+            </div>
           </div>
-        </RevealOnScroll>
+        </div>
       </div>
     </section>
   );

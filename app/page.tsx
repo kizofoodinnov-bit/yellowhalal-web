@@ -14,45 +14,26 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        {/* 1. Hero + MegaSearch + Stats */}
         <Hero />
-
-        {/* 2. Categories */}
         <Categories />
-
-        {/* 3. Top 3 Restaurants */}
         <Top3Section />
-
-        {/* 4. Ad Banner #1 - Isla Délice */}
-        <div className="max-w-[1280px] mx-auto px-6">
-          <AdBanner
-            brand="I"
-            title="Isla Délice · Certifié halal depuis 1992"
-            desc="Découvrez notre gamme complète de charcuterie et traiteur halal dans plus de 3 500 points de vente."
-            cta="Découvrir"
-          />
-        </div>
-
-        {/* 5. Commerces à proximité */}
+        <AdBanner
+          brand="I"
+          title="Isla Délice — Certifié halal depuis 1992"
+          desc="Découvrez notre gamme complète de charcuterie et traiteur halal dans plus de 3 500 points de vente."
+          cta="Découvrir"
+          bgColor="#1A1A1A"
+        />
         <ProximityMap />
-
-        {/* 6. Recherches en tendance */}
         <TrendingSearches />
-
-        {/* 7. Ad Banner #2 - HalalBooking */}
-        <div className="max-w-[1280px] mx-auto px-6">
-          <AdBanner
-            brand="H"
-            title="HalalBooking · Vacances halal-friendly"
-            desc="Plus de 800 hôtels sélectionnés en Turquie, Espagne, Maroc. Plages privées, piscines séparées, cuisine halal."
-            cta="Réserver"
-          />
-        </div>
-
-        {/* 8. Articles & Guides */}
+        <AdBanner
+          brand="H"
+          title="HalalBooking — Vacances halal-friendly"
+          desc="Plus de 800 hôtels sélectionnés en Turquie, Espagne, Maroc. Plages privées, piscines séparées, cuisine halal."
+          cta="Réserver"
+          bgColor="#0D47A1"
+        />
         <ArticlesSection />
-
-        {/* 9. CTA Professionnels */}
         <CTAPros />
       </main>
       <Footer />

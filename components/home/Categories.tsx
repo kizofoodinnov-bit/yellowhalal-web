@@ -1,54 +1,40 @@
 'use client';
 
 import { UtensilsCrossed, ShoppingCart, Shirt, GraduationCap, Heart, Plane, Calendar, Landmark } from 'lucide-react';
-import RevealOnScroll from '@/components/ui/RevealOnScroll';
 
 const categories = [
-  { name: 'Restauration', icon: UtensilsCrossed, count: '4 280 adresses', color: 'var(--color-cat-restau)' },
-  { name: 'Épiceries', icon: ShoppingCart, count: '2 150 adresses', color: 'var(--color-cat-epicerie)' },
-  { name: 'Mode & Beauté', icon: Shirt, count: '1 840 adresses', color: 'var(--color-cat-mode)' },
-  { name: 'Éducation & Religion', icon: GraduationCap, count: '2 640 adresses', color: 'var(--color-cat-education)' },
-  { name: 'Santé & Bien-être', icon: Heart, count: '1 450 adresses', color: 'var(--color-cat-sante)' },
-  { name: 'Voyages Halal', icon: Plane, count: '620 offres', color: 'var(--color-cat-voyage)' },
-  { name: 'Événementiel', icon: Calendar, count: '1 320 prestataires', color: 'var(--color-cat-event)' },
-  { name: 'Finance Islamique', icon: Landmark, count: '180 experts', color: 'var(--color-cat-finance)' },
+  { name: 'Restauration', icon: UtensilsCrossed, color: '#FF8F00', bg: '#FFF3E0' },
+  { name: 'Épiceries', icon: ShoppingCart, color: '#2E7D32', bg: '#E8F5E9' },
+  { name: 'Mode & Beauté', icon: Shirt, color: '#C62828', bg: '#FFEBEE' },
+  { name: 'Éducation', icon: GraduationCap, color: '#1565C0', bg: '#E3F2FD' },
+  { name: 'Santé', icon: Heart, color: '#00897B', bg: '#E0F2F1' },
+  { name: 'Voyages', icon: Plane, color: '#0277BD', bg: '#E1F5FE' },
+  { name: 'Événements', icon: Calendar, color: '#AD1457', bg: '#FCE4EC' },
+  { name: 'Finance', icon: Landmark, color: '#4527A0', bg: '#EDE7F6' },
 ];
 
 export default function Categories() {
   return (
-    <section id="categories" className="py-20 px-6">
-      <div className="max-w-[1280px] mx-auto">
-        <RevealOnScroll>
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <span className="eyebrow">Catégories</span>
-              <h2 className="text-[36px] md:text-[44px] font-semibold tracking-[-0.035em] mt-2">
-                Explorez par <em className="title-accent">centre d&apos;intérêt</em>
-              </h2>
-            </div>
-            <a href="#" className="hidden md:flex items-center gap-1.5 text-[14px] font-medium text-yh-gray-60 hover:text-yh-black transition-colors">
-              Toutes les catégories
-              <span className="text-yh-yellow">→</span>
-            </a>
-          </div>
-        </RevealOnScroll>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {categories.map((cat, i) => {
+    <section id="categories" className="bg-white border-b border-yh-gray-border">
+      <div className="max-w-[1200px] mx-auto px-5 py-8">
+        <div className="flex justify-between items-start overflow-x-auto gap-2 scrollbar-hide">
+          {categories.map((cat) => {
             const Icon = cat.icon;
             return (
-              <RevealOnScroll key={cat.name} delay={i * 60}>
-                <button className="group w-full text-left p-6 rounded-2xl border border-yh-gray-10 bg-white hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
-                  <div
-                    className="w-[72px] h-[72px] rounded-2xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:rotate-[-5deg] group-hover:scale-110"
-                    style={{ backgroundColor: `${cat.color}15` }}
-                  >
-                    <Icon size={28} style={{ color: cat.color }} />
-                  </div>
-                  <h3 className="text-[16px] font-semibold text-yh-black mb-1">{cat.name}</h3>
-                  <p className="text-[13px] text-yh-gray-60">{cat.count}</p>
-                </button>
-              </RevealOnScroll>
+              <button
+                key={cat.name}
+                className="flex flex-col items-center gap-2.5 min-w-[100px] px-2 py-3 rounded-xl hover:bg-yh-gray-bg transition-colors group"
+              >
+                <div
+                  className="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
+                  style={{ backgroundColor: cat.bg }}
+                >
+                  <Icon size={26} style={{ color: cat.color }} />
+                </div>
+                <span className="text-[13px] font-medium text-yh-gray-dark text-center leading-tight">
+                  {cat.name}
+                </span>
+              </button>
             );
           })}
         </div>
