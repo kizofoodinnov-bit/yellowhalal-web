@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
+import { Poppins } from 'next/font/google';
 import './globals.css';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'YellowHalal — Trouvez des adresses 100% Halal',
@@ -22,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={GeistSans.className}>
+    <html lang="fr" className={poppins.className}>
       <body>{children}</body>
     </html>
   );

@@ -105,8 +105,8 @@ export default function HomePage() {
       <header style={{ position: 'sticky', top: 0, zIndex: 50, background: C.white, borderBottom: `1px solid ${C.grayBorder}`, boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
         <div style={{ ...container, display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
           <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-            <Image src="/yellowhalal.png" alt="YellowHalal" width={36} height={36} />
-            <span style={{ fontSize: 20, fontWeight: 800, color: C.black, letterSpacing: '-0.02em' }}>
+            <Image src="/yellowhalal.png" alt="YellowHalal" width={48} height={48} />
+            <span style={{ fontSize: 24, fontWeight: 800, color: C.black, letterSpacing: '-0.02em' }}>
               Yellow<span style={{ fontWeight: 500, color: C.gray }}>Halal</span>
             </span>
           </a>
